@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> JavaScript Task 8</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <style>
+        
+            label{
+                display:inline-block;
+                width:200px;
+                margin:2px;
+                font-weight: bold;
+            }
+            .bg-container{
+                background-image: linear-gradient(to bottom,#ffffcc,#e93aaf93);
+                padding:40px;
+                height: 100vh;
+            }
+            input[type=submit]{
+            margin-left: 300px;
+            color:white;
+            background-color: red;
+            border-radius: 12px;
+            width:100px;
+
+
+            }
+            input[type=text]{
+                width:420px;
+                margin:2px;
+            }
+            input[type=password]{
+                width:420px;
+                margin:2px;
+            }
+            input[type=email]{
+                width:420px;
+                margin:2px;
+            }
+    </style>       
+    
+</head>
+<body>
+    <div class="bg-container p-5" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <h1 style="color: blue; text-align: center;">Registration Form</h1>
+
+        <form>
+            <label>First Name</label>
+            <input type="text" id="fn">
+            <span class="mx-2 text-danger" id="firstname-check"></span>
+            <br>
+
+            <label>Last Name</label>
+            <input type="text" id="ln">
+            <span class="mx-2 text-danger" id="lastname-check"></span>
+            <br>
+
+            <label>Email</label>
+            <input type="email" id="em">
+            <span class="mx-2 text-danger" id="email-check"></span>
+            <br>
+
+            <label>Password</label>
+            <input type="password" id="pwd">
+            <span class="mx-2 text-danger" id="password-check"></span>
+            <br>
+
+            <label>Re-enter Password</label>
+            <input type="password" id="repwd">
+            <span class="mx-2 text-danger" id="re-password-check"></span>
+            <br>
+
+            <label>Gender:</label>
+            <input type="radio" name="gen">Male <br>
+            <span style="padding:102px;" ></span><input type="radio" name="gen">Female
+            <br>
+
+            <label>Age:</label>
+            <input type="text" id="age">
+            <span class="mx-2 text-danger" id="age-check"></span>
+            <br>
+
+            <label>Phone Number</label>
+            <input type="text" id="phn">
+            <span class="mx-2 text-danger" id="phone-number-check"></span>
+            <br>
+
+            <label>Address</label>
+            <textarea name="addr" rows="5" cols="55" id="ad"></textarea>
+            <span class="mx-2 text-danger" id="address-check"></span>
+            <br>
+
+            <label>State</label>
+            <input type="text" id="st">
+            <span class="mx-2 text-danger" id="state-check"></span>
+            <br>
+
+            <label>Country</label>
+            <select name="ctry">
+                <option selected>Choose your country</option>
+                <option>India</option>
+                <option>USA</option>
+                <option>Australia</option></select>
+            <br>
+
+            <label>Languages known</label>
+            <input type="checkbox">English<input type="checkbox">Kannada<input type="checkbox">Hindi<input type="checkbox">Telugu
+            <br>
+
+            <input type="checkbox"> Hereby I declare all the given details are true
+            <br>
+
+            <span style="margin-left:400px;">Log in to <a href="https://ethnus.com/">Ethnus</a> website</span>
+            <br>
+
+            <input type="submit" value="Register" onclick="return validate()">
+
+        </form>
+
+    <script>
+        function validate() {
+            var flag = 1;
+            var firstName = document.getElementById("fn").value;
+            var lastName = document.getElementById("ln").value;
+            var email = document.getElementById("em").value;
+            var password = document.getElementById("pwd").value;
+            var rePassword = document.getElementById("repwd").value;
+            var age = document.getElementById("age").value;
+            var phoneNumber = document.getElementById("phn").value;
+            var address = document.getElementById("ad").value;
+            var state = document.getElementById("st").value;
+            if (firstName.trim() === "") {
+                document.getElementById("firstname-check").textContent = "POOR";
+                document.getElementById("firstname-check").style.color = "red";
+                flag=0;
+            }
+
+            if (lastName.trim() === "") {
+                document.getElementById("lastname-check").textContent = "POOR";
+                document.getElementById("lastname-check").style.color = "red";
+                flag=0;
+            }
+
+            if (email.trim() === "") {
+                document.getElementById("email-check").textContent = "POOR";
+                document.getElementById("email-check").style.color = "red";
+                flag=0;
+            }
+
+            if (password.trim() === "") {
+                document.getElementById("password-check").textContent = "POOR";
+                document.getElementById("password-check").style.color = "red";
+                flag=0;
+            }
+
+            if (rePassword.trim() === "") {
+                document.getElementById("re-password-check").textContent = "POOR OR MISMATCH";
+                document.getElementById("re-password-check").style.color = "red";
+                flag=0;
+            }
+            else{
+                if(rePassword!==password){
+                    document.getElementById("re-password-check").textContent = "MISMATCH";
+                    flag=0;
+                }
+            }
+
+            if (age.trim() === "") {
+                document.getElementById("age-check").textContent = "POOR";
+                document.getElementById("age-check").style.color = "red";
+                flag=0;
+            }
+
+            if (phoneNumber.trim() === "") {
+                document.getElementById("phone-number-check").textContent = "POOR";
+                document.getElementById("phone-number-check").style.color = "red";
+                flag=0;
+            }
+
+            if (address.trim() === "") {
+                document.getElementById("address-check").textContent = "POOR";
+                document.getElementById("address-check").style.color = "red";
+                flag=0;
+            }
+
+            if (state.trim() === "") {
+                document.getElementById("state-check").textContent = "POOR";
+                document.getElementById("state-check").style.color = "red";
+                flag=0;
+            }
+            
+            if(flag == 1){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Task 5</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form name="f1">
+        <table>
+            <tr>
+                <td>
+                   <label for="name">Name :</label> 
+                </td>
+                <td>
+                    <input type="text" id="name">
+                    <span id="namelocation" class="error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   <label for="email">Email :</label> 
+                </td>
+                <td>
+                    <input type="email" id="email">
+                    <span id="maillocation" class="error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   <label for="website">Website :</label> 
+                </td>
+                <td>
+                    <input type="text" id="website">
+                    <span id="weblocation" class="error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   <label for="address">Message :</label> 
+                </td>
+                <td>
+                    <textarea id="address" name="message" rows="6"></textarea>
+                    <span id="messagelocation" class="error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" onclick="return checking_Parameters();">Submit</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function checking_Parameters() {
+            var name = document.getElementById("name").value;
+            var mail = document.getElementById("email").value;
+            var website = document.getElementById("website").value;
+            var message = document.getElementById("address").value;
+
+            var status = true;
+
+            if (name == "") {
+                document.getElementById("namelocation").innerHTML = "Please enter your name";
+                document.getElementById("namelocation").style.display = "inline-block";
+                status = false;
+            } else {
+                document.getElementById("namelocation").innerHTML = "";
+            }
+
+            if (mail == "" || !mail.includes("@")) {
+                document.getElementById("maillocation").innerHTML = "Enter a proper Email";
+                document.getElementById("maillocation").style.display = "inline-block";
+                status = false;
+            } else {
+                document.getElementById("maillocation").innerHTML = "";
+            }
+
+            if (website == "") {
+                document.getElementById("weblocation").innerHTML = "Enter a proper Website";
+                document.getElementById("weblocation").style.display = "inline-block";
+                status = false;
+            } else {
+                document.getElementById("weblocation").innerHTML = "";
+            }
+
+            if (message == "") {
+                document.getElementById("messagelocation").innerHTML = "Enter the Message";
+                document.getElementById("messagelocation").style.display = "inline-block";
+                status = false;
+            } else {
+                document.getElementById("messagelocation").innerHTML = "";
+            }
+
+            return status;
+        }
+    </script>
+</body>
+</html>

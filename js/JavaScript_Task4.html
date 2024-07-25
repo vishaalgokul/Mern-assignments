@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Task 4</title>
+</head>
+<body>
+    <div>
+        <div style="padding: 5px;">
+            <button onclick="showdate()">Show Date</button>
+        </div>
+        <div id="result1" style="padding-left: 10px;"></div>
+        <div style="padding: 5px;">
+            <button onclick="showtime()">Show Time</button>
+        </div>
+        <div id="result2" style="padding-left: 10px;"></div>
+    </div>
+</body>
+<script>
+    function showdate(){
+        let currentDate = new Date();
+        let dateString = currentDate.toLocaleDateString();
+        document.getElementById('result1').textContent = dateString;
+    }
+    function showtime(){
+        let currentDate = new Date();
+        let dayOfWeek = currentDate.getDay();
+        let daysOfWeek = ['Sun', 'Mon', 'Tues', 'Wed', 'Thur', 'Fri', 'Sat'];
+        let dayName = daysOfWeek[dayOfWeek];
+        let month = currentDate.getMonth() + 1;
+        let monthsOfYear = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+        let monthname = monthsOfYear[month]
+        let day = currentDate.getDate();
+        let year = currentDate.getFullYear();
+        let timeString = currentDate.toLocaleTimeString();
+        document.getElementById('result2').textContent = dayName+" "+monthname+" "+day+" "+year+" "+timeString+" GMAT+0530 (India Standard Time)";
+    }
+</script>
+</html>

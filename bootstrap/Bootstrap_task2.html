@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+        #img-div {
+            background-image: url("./engineer.png");
+            height: 80vh;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            font-size: large;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        #button {
+            height: 5rem;
+            width: 10rem;
+            border-color: white;
+            font-size: larger;
+            background-color: transparent;
+            color: white;
+        }
+        #footer{
+            font-size:x-large;
+        }
+        #title{
+            color: rgb(4, 24, 140);
+        }
+    </style>
+</head>
+<body style="background-color: goldenrod; width: 90%; margin-left: auto; margin-right: auto;">
+    <div class="container">
+        <div class="row">
+            <div class="col" id="title">
+                <h1 class="display-4 fw-bold">Builderz</h1>
+            </div>
+            <div class="col pt-2 d-flex justify-content-end align-items-center">
+                <img src="./opening_hours.png" alt="error" style="background-color: transparent; width: 20%;">
+                <div class="ms-2">
+                    <h6>Opening Hours</h6>
+                    <p>Mon-Fri, 8:00-9:00</p>
+                </div>
+            </div>
+            <div class="col pt-2 d-flex justify-content-end align-items-center">
+                <img src="./support.png" alt="error" style="background-color: transparent; width: 20%;">
+                <div class="ms-2">
+                    <h6>Call Us</h6>
+                    <p>+012 345 6789</p>
+                </div>
+            </div>
+            <div class="col pt-2 d-flex justify-content-end align-items-center">
+                <img src="./email.png" alt="error" style="background-color: transparent; width: 20%;">
+                <div class="ms-2">
+                    <h6>Email Us</h6>
+                    <p>info@example.com</p>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <div>
+        <nav class="navbar p-2 text-white" style="background-color: rgb(4, 24, 140);">
+            <ul class="nav">
+                <li class="nav-item"><a href="#" class="nav-link link-light me-5">HOME</a></li>
+                <li class="nav-item"><a href="#" class="nav-link link-light me-5">ABOUT</a></li>
+                <li class="nav-item"><a href="#" class="nav-link link-light me-5">SERVICE</a></li>
+                <li class="nav-item"><a href="#" class="nav-link link-light me-5">TEAM</a></li>
+                <li class="nav-item"><a href="#" class="nav-link link-light me-5">PROJECT</a></li>
+                <li class="nav-item"><a href="#" class="nav-link link-light me-5 dropdown-toggle">PAGES</a></li>
+                <li class="nav-item"><a href="#" class="nav-link link-light me-5">CONTACT</a></li>
+            </ul>
+            <ul class="nav navbar-right">
+                <button type="submit" style="background-color: rgb(4, 24, 140)" class="text-white border-white">Get a Quote</button>
+            </ul>
+        </nav>
+    </div>
+    <div id="img-div">
+        <h3 class="py-2">We are Professionals</h3>
+        <h1 class="py-3">For your dream project</h1>
+        <button id="button">Get a Quote</button>
+    </div>
+    <div class="px-2" id="footer">
+        <div class="row">
+          <div class="col text-warning" style="background-color: rgb(4, 24, 140);">
+            <div><img src="./expert_worker.png" alt="error" style="float:left; width:25%; background-color: transparent;" class="rounded-circle"></div>
+            <h3>Expert Worker</h3>
+            <p>Lorem ipsum dolar sir amet elit.Phasus nec pretim ornare velit non</p>
+          </div>
+          <div class="col bg-warning">
+            <div><img src="./quality_work.png" alt="error" style="float:left; width:25%; color: rgb(4, 24, 140) ; background-color: transparent;" class="rounded-circle"></div>
+            <h3 class="fw-bold">Quality Work</h3>
+            <p>Lorem ipsum dolar sir amet elit.Phasus nec pretim ornare velit non</p></div>
+          <div class="col text-warning" style="background-color: rgb(4, 24, 140);">
+            <div><img src="./support.png" alt="error" style="float:left; width:25%; background-color: transparent;" class="rounded-circle"></div>
+            <h3>24/7 Support</h3>
+            <p>Lorem ipsum dolar sir amet elit.Phasus nec pretim ornare velit non</p></div>
+        </div>
+      </div>
+</body>
+</html>

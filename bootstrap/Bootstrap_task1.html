@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nav Bar</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    }
+    .header {
+    background-color: #00ccee;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    }
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #a1a0a5;
+    }
+
+    li {
+    float: left;
+    }
+
+    li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    }
+
+    li a:hover {
+    background-color: #111;
+    }
+
+    .sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    right: 0;
+    background-color: #636162;
+    overflow-x: hidden;
+    }
+    .main {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: #f8f9fb;
+
+    left: 0;
+    }
+
+  </style>
+  <body>
+    <div class="header">
+      <h1>Ethnus layout</h1>
+    </div>
+    <div class="nav-bar">
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">MENU</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">CONTACT</a></li>
+        <li style="float: right"><a href="#">Sign Up</a></li>
+        <li style="float: right"><a href="#">Login</a></li>
+      </ul>
+    </div>
+    <div class="main">
+      <p style="text-align: center">Write your Content here</p>
+    </div>
+    <div class="sidenav"><p style="text-align: center">This is</p></div>
+  </body>
+</html>
